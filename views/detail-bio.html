@@ -1,0 +1,119 @@
+<section ng-controller="bioDetaile">
+    <div class="container">
+        <div class="row box-content short-info d-flex justify-content-between p-5">
+            <div class="col-md-4">
+                <img ng-src="{{fullinfo.thumburl}}" alt="{{fullinfo.title}}">
+            </div>
+            <div class="col-md-8 d-flex flex-column justify-content-between">
+                <h1>{{fullinfo.title}}</h1>
+                <span>{{fullinfo.winnerof}}</span>
+                <p>Born: {{fullinfo.born}}</p>
+                <p ng-if="fullinfo.atin">Affiliation at the time of the award: {{fullinfo.atin}}</p>
+                <p>Prize motivation: “{{fullinfo.prizemotivation}}”</p>
+                <p>Prize share: {{fullinfo.prizeshare}}</p>
+                <ul>
+                    <li ng-if="fullinfo.biography" ng-click="scrollTo('Biography')">
+                        Biography
+                    </li>
+                    <li ng-if="fullinfo.lifeedu" ng-click="scrollTo('Life-education')">
+                        Life and educatio
+                    </li>
+                    <li ng-if="fullinfo.researchcareer" ng-click="scrollTo('Research-career')">
+                        Research & career
+                    </li>
+                    <li ng-if="fullinfo.awardshonors" ng-click="scrollTo('Awards')">
+                        Awards and honors
+                    </li>
+                    <li ng-if="fullinfo.timeline" ng-click="scrollTo('Timeline')">
+                        Timeline
+                    </li>
+                    <li ng-if="fullinfo.books" ng-click="scrollTo('Selected-works')">
+                        Selected Works
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row full-info my-5">
+            <div class="col-md-2 p-0">
+                <div class="position-sticky sticky-top">
+                    <div class="box-content stickybox">
+                        <span class="h-line-x">Table of Contents: </span>
+                        <ul class="toc">
+                            <li ng-if="fullinfo.biography" ng-click="scrollTo('Biography')">
+                                Biography
+                            </li>
+                            <li ng-if="fullinfo.lifeedu" ng-click="scrollTo('Life-education')">
+                                Life and educatio
+                            </li>
+                            <li ng-if="fullinfo.researchcareer" ng-click="scrollTo('Research-career')">
+                                Research & career
+                            </li>
+                            <li ng-if="fullinfo.awardshonors" ng-click="scrollTo('Awards')">
+                                Awards and honors
+                            </li>
+                            <li ng-if="fullinfo.timeline" ng-click="scrollTo('Timeline')">
+                                Timeline
+                            </li>
+                            <li ng-if="fullinfo.books" ng-click="scrollTo('Selected-works')">
+                                Selected Works
+                            </li>
+                            <li ng-if="fullinfo.refs" ng-click="scrollTo('References')">
+                                References
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 row row-cols-1 g-0">
+                <div id="Biography" class="box-content box-info p-4" ng-if="fullinfo.biography">
+                    <h2 class="h-line-x">Biography:</h2>
+                    <div ng-bind-html="fullinfo.biography | convert"></div>
+                </div>
+                <div id="Life-education" class="box-content box-info p-4" ng-if="fullinfo.lifeedu">
+                    <h2 class="h-line-x">Early life and education:</h2>
+                    <div ng-bind-html="fullinfo.lifeedu | convert"></div>
+                </div>
+                <div id="Research-career" class="box-content box-info p-4" ng-if="fullinfo.researchcareer">
+                    <h2 class="h-line-x">Research and career:</h2>
+                    <div ng-bind-html="fullinfo.researchcareer | convert"></div>
+                </div>
+                <div id="Awards" class="box-content box-info p-4" ng-if="fullinfo.awardshonors">
+                    <h2 class="h-line-x">Awards and honors:</h2>
+                    <div ng-bind-html="fullinfo.awardshonors | convert"></div>
+                    <div ng-if="fullinfo.videoawards">
+                        <h3>{{fullinfo.videoawards.title}}</h3>
+                        <iframe width="100%" height="550" ng-src="{{fullinfo.videoawards.id | embed}}" title="Nobel Minds 2022" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <p>{{fullinfo.videoawards.info}}</p>
+                    </div>
+                </div>
+                <div id="Timeline" class="box-content box-info p-4" ng-if="fullinfo.timeline">
+                    <h2 class="h-line-x">Timeline:</h2>
+                    <!-- <ul class="timeline">
+                            <li ng-repeat="time in fullinfo.timeline"><span>{{time.year}}</span>{{time.content}}</li>
+                        </ul> -->
+
+                    <ul class="timeline-horizontal">
+                        <li class="timeline-item" ng-repeat="time in fullinfo.timeline">
+                            <span>{{time.year}}</span>{{time.content}}
+                        </li>
+                    </ul>
+                </div>
+                <div id="Selected-works" class="box-content box-info p-4" ng-if="fullinfo.books">
+                    <h2 class="h-line-x">Selected works:</h2>
+                    <ul class="books">
+                        <li ng-repeat="book in fullinfo.books"><a ng-href="{{book.link}}">{{book.name}}</a></li>
+                    </ul>
+                </div>
+                <div id="References" class="box-content box-info p-4" ng-if="fullinfo.refs">
+                    <h2 class="h-line-x">References:</h2>
+                    <ul class="links">
+                        <li ng-repeat="ref in fullinfo.refs"><a ng-href="{{ref.link}}">{{ref.name}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Body Content -->

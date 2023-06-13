@@ -1,0 +1,107 @@
+<div ng-controller="pageGallery">
+  <div class="container-fluid bgtitle bggl">
+    <h1>Galleries</h1>
+  </div>
+  <div class="container g-0 py-5">
+    <div class="row">
+      <form class="p-3 nobel_select">
+        <div class="row d-flex justify-content-between">
+          <div class="col-12">
+            <select
+              name="categories"
+              id="form-categories"
+              size="4"
+              ng-model="selectedCategory"
+              class="text-center"
+            >
+              <option class="col" value="" selected>All</option>
+              <option class="col" value="laureates">Laureates</option>
+              <option class="col" value="NobelWeek">Nobel Week</option>
+              <option class="col" value="Events">Events</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="listgal my-4 gap-4">
+      <div
+        class="gallery-item"
+        ng-repeat="galleryx in galleries | filter:{category:selectedCategory} | limitTo:pageSize:currentPage*pageSize"
+        ng-click="showModal($index)"
+      >
+        <span class="gcard" ng-repeat="imgx in galleryx.images | limitTo:3">
+          <img
+            width="220"
+            height="330"
+            ng-src="{{imgx.url_img}}"
+            alt="{{imgx.caption}}"
+          />
+        </span>
+        <h3 class="m-3">{{galleryx.title_gallery}}</h3>
+      </div>
+    </div>
+    <div class="row m-4 navpag">
+      <input
+        class="btn-pag"
+        type="button"
+        value="Previous"
+        ng-disabled="currentPage == 0"
+        ng-click="currentPage=currentPage-1"
+      />
+      {{currentPage+1}}/{{totalPages}}
+      <input
+        class="btn-pag"
+        type="button"
+        value="Next"
+        ng-disabled="currentPage == totalPages - 1"
+        ng-click="currentPage=currentPage+1"
+      />
+    </div>
+    <div id="myModal" class="modal" ng-click="closeModal()">
+      <div class="modal-content" ng-click="$event.stopPropagation()">
+        <div class="close"><span ng-click="closeModal()">&times;</span></div>
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div
+              ng-class="{'carousel-item active': $first}"
+              class="carousel-item"
+              ng-repeat="img in gallery[0].images"
+            >
+              <div
+                ng-class="{'carousel-item active': $first}"
+                class="carousel-item"
+                ng-repeat="data in sliders"
+              ></div>
+              <img
+                ng-src="{{img.url_img}}"
+                class="d-block"
+                alt="{{img.caption}}"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <h3 class="text-center text-dark fw-bold">
+          {{gallery[0].title_gallery}}
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>

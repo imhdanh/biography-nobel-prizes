@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi" ng-app="myApp" data-bs-theme="auto">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <title>Biography - The portal Nobel Prizes</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/myController.js"></script>
+    <script src="./js/color-modes.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container align-items-center">
+                <div class="logo"><a href="/">
+                        <img class="logo-light" src="./images/Logo-biography-dark.png" alt="Logo Biography">
+                        <img class="logo-dark" src="./images/Logo-biography.png" alt="Logo Biography"></a>
+                </div>
+                <div class="offcanvas-body" ng-class="{'show-box': showOffcanvas}">
+                    <div ng-click="showOffcanvas = !showOffcanvas"></div> 
+                    <ul class="navbar-nav mx-auto">
+                        <span class="btnClosebox" ng-click="showOffcanvas = !showOffcanvas"><i class="bi bi-x-square-fill"></i></span>
+
+                        <a href="#!/">
+                            <li class="nav-item" ng-class="{ active: isActive('/') }">Home</li>
+                        </a>
+                        <a href="#!/about-us">
+                            <li class="nav-item" ng-class="{ active: isActive('/about-us') }">About Us</li>
+                        </a>
+                        <a href="#!/nobel-prizes">
+                            <li class="nav-item" ng-class="{ active: isActive('/nobel-prizes') }">Nobel Prizes</li>
+                        </a>
+                        <a href="#!/news">
+                            <li class="nav-item" ng-class="{ active: isActive('/news') }">News</li>
+                        </a>
+                        <a href="#!/gallery">
+                            <li class="nav-item" ng-class="{ active: isActive('/gallery') }">Gallery</li>
+                        </a>
+                        <a href="#!/contact">
+                            <li class="nav-item" ng-class="{ active: isActive('/contact') }">Contact</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="header-end d-flex justify-content-end">
+                    <div class="h-col h-switch dropdown">
+                        <button class="theme-switch h-icon" id="bd-theme" type="button" aria-expanded="true" data-bs-toggle="dropdown"
+                            data-bs-display="static"><span class="bi icon-mn1 theme-icon-active"><i class="bi-sun-fill"></i>
+                            </span></button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme">
+                            <li><button type="button" class="dropdown-item active" data-bs-theme-value="light"><span>
+                                        <i class="bi-sun-fill"></i> </span>Light
+                                </button></li>
+                            <li><button type="button" class="dropdown-item" data-bs-theme-value="dark"><span class="bi me-2 opacity-50 theme-icon"><i
+                                            class="bi-moon-stars-fill"></i>
+                                    </span>Dark
+                                </button></li>
+                            <li><button type="button" class="dropdown-item" data-bs-theme-value="auto"><span class="bi me-2 opacity-50 theme-icon"><i
+                                            class="bi-circle-half"></i> </span>Auto
+                                </button></li>
+                        </ul>
+                    </div>
+                    <div class="h-col h-toggler d-xl-none d-lg-none btn_offcanvas" ng-click="showOffcanvas = !showOffcanvas">
+                        <i class="bi bi-list"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Begin Body Content -->
+    <div class="ng-view"></div>
+    <!-- End Body Content -->
+    <footer>
+        <div class="container g-0 pt-5 pb-2">
+            <div class="row row_one">
+                <div class="col-4 line-right-y hav-sub">
+                    <span class="h-line-x">Subscribe For Newsletter:</span>
+                    <div class="py-4">
+                        <div class="input-focus-effect">
+                            <input type="text" name="sub-email" id="sub-email" placeholder=" ">
+                            <label for="sub-email">Email</label>
+                            <input type="submit" hidden>
+                        </div>
+                    </div>
+                    <span class="h-line-x">Links:</span>
+                    <ul class="links-footer">
+                        <li><a href="#!/">Home</a></li>
+                        <li><a href="#!/about-us">About Us</a></li>
+                        <li><a href="#!/nobel-prizes">Nobel Prize</a></li>
+                        <li><a href="#!/news">News</a></li>
+                        <li><a href="#!/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="row hav-add col-8">
+                    <div class="col">
+                        <span class="h-line-x">Contact the Nobel Foundation:</span>
+                        <ul class="footer-address pt-2">
+                            <li><i class="bi bi-mailbox"></i>Postal address: The Nobel Foundation <br> P.O. Box 5232,
+                                SE-102
+                                45 Stockholm, Sweden
+                            </li>
+                            <li><i class="bi bi-geo-alt"></i>Street address: Sturegatan 14, Stockholm</li>
+                            <li><i class="bi bi-telephone"></i>Tel: +46 (0)8 663 09 20</li>
+                            <li><i class="bi bi-printer"></i>Fax: +46 (0)8 660 38 47</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <span class="h-line-x">Contact Nobel Prize Outreach:</span>
+                        <ul class="footer-address pt-2">
+                            <li><i class="bi bi-mailbox"></i>Postal address: The Nobel Foundation <br> P.O. Box 5232,
+                                SE-102
+                                45 Stockholm, Sweden
+                            </li>
+                            <li><i class="bi bi-geo-alt"></i>Street address: Sturegatan 14, Stockholm</li>
+                            <li><i class="bi bi-telephone"></i>Tel: +46 (0)8 663 09 20</li>
+                            <li><i class="bi bi-printer"></i>Fax: +46 (0)8 660 38 47</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="social-footer">
+                        <div class="line-x"></div>
+                        <ul class="bi-social-icon">
+                            <li>
+                                <a href="https://www.facebook.com/">
+                                    <i class="bi bi-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitter.com/">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex flex-column align-items-center">
+                    <div class="logo"><a href="/">
+                            <img class="logo-light" src="./images/Logo-biography-dark.png" alt="Logo Biography">
+                            <img class="logo-dark" src="./images/Logo-biography.png" alt="Logo Biography"></a>
+                    </div>
+                    <p>Copyright © 2023 eProject Sem01 T1.2210.E1 - Aptech</p>
+                    <p>Disclaimer Info: All content and information on website is for
+                        educational purposes only.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="backToTop" ng-click="scrollTo()"><i class="bi bi-caret-up-fill"></i></div>
+    <div id="panelMenu">
+        <nav class="menuIcon">
+            <input type="checkbox" class="open-panelMenu" name="open-panelMenu" id="btnIconMain">
+            <label class="open-panelMenu-show" for="btnIconMain">
+                <i class="bi bi-command"></i>
+            </label>
+            <div class="item-menu" ng-click="showTime = !showTime">
+                <i class="bi bi-clock"></i>
+            </div>
+            <div class="item-menu" ng-click="showVisitor = !showVisitor">
+                <i class="bi bi-eye"></i>
+            </div>
+
+        </nav>
+    </div>
+    <div id="showVisitor" class="boxoutsite" ng-class="{'show-box': showVisitor}">
+        <span class="btnClosebox" ng-click="showVisitor = !showVisitor"><i class="bi bi-x-square-fill"></i></span>
+        <div class="outsite-content">
+            <i class="bi bi-eye"></i></i> Views:<br>
+            {{showDataVisitor.visitor}}
+        </div>
+    </div>
+    <div id="showTime" class="boxoutsite" ng-class="{'show-box': showTime}">
+        <span class="btnClosebox" ng-click="showTime = !showTime"><i class="bi bi-x-square-fill"></i></span>
+        <div class="outsite-content">
+            {{timenow | date:'dd MMMM yyyy'}} <br>
+            {{timenow | date:'h:mm:ss a'}}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,550 @@
+{
+  "gallery": [
+    {
+      "title_gallery": "Nobel Prize laureates 2022",
+      "category": "laureates",
+      "images": [
+        {
+          "caption": "Caption 01",
+          "url_img": "/images/galleries/1/gall01.jpg"
+        },
+        {
+          "caption": "Caption 02",
+          "url_img": "/images/galleries/1/gall02.jpg"
+        },
+        {
+          "caption": "Caption 03",
+          "url_img": "/images/galleries/1/gall03.jpg"
+        },
+        {
+          "caption": "Caption 04",
+          "url_img": "/images/galleries/1/gall04.jpg"
+        },
+        {
+          "caption": "Caption 05",
+          "url_img": "/images/galleries/1/gall05.jpg"
+        },
+        {
+          "caption": "Caption 06",
+          "url_img": "/images/galleries/1/gall06.jpg"
+        },
+        {
+          "caption": "Caption 07",
+          "url_img": "/images/galleries/1/gall07.jpg"
+        },
+        {
+          "caption": "Caption 08",
+          "url_img": "/images/galleries/1/gall08.jpg"
+        },
+        {
+          "caption": "Caption 09",
+          "url_img": "/images/galleries/1/gall09.jpg"
+        }
+      ]
+    },
+    {
+      "title_gallery": "Nobel Week 2022",
+      "category": "NobelWeek",
+      "images": [
+        {
+          "caption": "Caption 01",
+          "url_img": "/images/galleries/2/gall01.jpg"
+        },
+        {
+          "caption": "Caption 02",
+          "url_img": "/images/galleries/2/gall02.jpg"
+        },
+        {
+          "caption": "Caption 03",
+          "url_img": "/images/galleries/2/gall03.jpg"
+        },
+        {
+          "caption": "Caption 04",
+          "url_img": "/images/galleries/2/gall04.jpg"
+        },
+        {
+          "caption": "Caption 05",
+          "url_img": "/images/galleries/2/gall05.jpg"
+        },
+        {
+          "caption": "Caption 06",
+          "url_img": "/images/galleries/2/gall06.jpg"
+        },
+        {
+          "caption": "Caption 07",
+          "url_img": "/images/galleries/2/gall07.jpg"
+        },
+        {
+          "caption": "Caption 08",
+          "url_img": "/images/galleries/2/gall08.jpg"
+        },
+        {
+          "caption": "Caption 09",
+          "url_img": "/images/galleries/2/gall09.jpg"
+        }
+      ]
+    },
+    {
+      "title_gallery": "Nobel Prize Summit 2023",
+      "category": "Events",
+      "images": [
+        {
+          "caption": "Caption 01",
+          "url_img": "/images/galleries/3/gall01.jpg"
+        },
+        {
+          "caption": "Caption 02",
+          "url_img": "/images/galleries/3/gall02.jpg"
+        },
+        {
+          "caption": "Caption 03",
+          "url_img": "/images/galleries/3/gall03.jpg"
+        },
+        {
+          "caption": "Caption 04",
+          "url_img": "/images/galleries/3/gall04.jpg"
+        },
+        {
+          "caption": "Caption 05",
+          "url_img": "/images/galleries/3/gall05.jpg"
+        },
+        {
+          "caption": "Caption 06",
+          "url_img": "/images/galleries/3/gall06.jpg"
+        },
+        {
+          "caption": "Caption 07",
+          "url_img": "/images/galleries/3/gall07.jpg"
+        },
+        {
+          "caption": "Caption 08",
+          "url_img": "/images/galleries/3/gall08.jpg"
+        },
+        {
+          "caption": "Caption 09",
+          "url_img": "/images/galleries/3/gall09.jpg"
+        }
+      ]
+    },
+    {
+      "title_gallery": "Nobel Week Lights 2022",
+      "category": "Events",
+      "images": [
+        {
+          "caption": "Caption 01",
+          "url_img": "/images/galleries/4/gall01.jpg"
+        },
+        {
+          "caption": "Caption 02",
+          "url_img": "/images/galleries/4/gall02.jpg"
+        },
+        {
+          "caption": "Caption 03",
+          "url_img": "/images/galleries/4/gall03.jpg"
+        },
+        {
+          "caption": "Caption 04",
+          "url_img": "/images/galleries/4/gall04.jpg"
+        },
+        {
+          "caption": "Caption 05",
+          "url_img": "/images/galleries/4/gall05.jpg"
+        },
+        {
+          "caption": "Caption 06",
+          "url_img": "/images/galleries/4/gall06.jpg"
+        },
+        {
+          "caption": "Caption 07",
+          "url_img": "/images/galleries/4/gall07.jpg"
+        },
+        {
+          "caption": "Caption 08",
+          "url_img": "/images/galleries/4/gall08.jpg"
+        },
+        {
+          "caption": "Caption 09",
+          "url_img": "/images/galleries/4/gall09.jpg"
+        }
+      ]
+    },
+    {
+      "title_gallery": "Nobel Week 2021",
+      "category": "NobelWeek",
+      "images": [
+        {
+          "caption": "Caption 01",
+          "url_img": "/images/galleries/5/gall01.jpg"
+        },
+        {
+          "caption": "Caption 02",
+          "url_img": "/images/galleries/5/gall02.jpg"
+        },
+        {
+          "caption": "Caption 03",
+          "url_img": "/images/galleries/5/gall03.jpg"
+        },
+        {
+          "caption": "Caption 04",
+          "url_img": "/images/galleries/5/gall04.jpg"
+        },
+        {
+          "caption": "Caption 05",
+          "url_img": "/images/galleries/5/gall05.jpg"
+        },
+        {
+          "caption": "Caption 06",
+          "url_img": "/images/galleries/5/gall06.jpg"
+        },
+        {
+          "caption": "Caption 07",
+          "url_img": "/images/galleries/5/gall07.jpg"
+        },
+        {
+          "caption": "Caption 08",
+          "url_img": "/images/galleries/5/gall08.jpg"
+        },
+        {
+          "caption": "Caption 09",
+          "url_img": "/images/galleries/5/gall09.jpg"
+        }
+      ]
+    },
+    {
+      "title_gallery": "Nobel Prize laureates 2020",
+      "category": "laureates",
+      "images": [
+        {
+          "caption": "Caption 01",
+          "url_img": "/images/galleries/6/gall01.jpg"
+        },
+        {
+          "caption": "Caption 02",
+          "url_img": "/images/galleries/6/gall02.jpg"
+        },
+        {
+          "caption": "Caption 03",
+          "url_img": "/images/galleries/6/gall03.jpg"
+        },
+        {
+          "caption": "Caption 04",
+          "url_img": "/images/galleries/6/gall04.jpg"
+        },
+        {
+          "caption": "Caption 05",
+          "url_img": "/images/galleries/6/gall05.jpg"
+        },
+        {
+          "caption": "Caption 06",
+          "url_img": "/images/galleries/6/gall06.jpg"
+        },
+        {
+          "caption": "Caption 07",
+          "url_img": "/images/galleries/6/gall07.jpg"
+        },
+        {
+          "caption": "Caption 08",
+          "url_img": "/images/galleries/6/gall08.jpg"
+        },
+        {
+          "caption": "Caption 09",
+          "url_img": "/images/galleries/6/gall09.jpg"
+        }
+      ]
+    },
+    {
+      "title_gallery": "Global events",
+      "category": "Events",
+      "images": [
+        {
+          "caption": "Caption 01",
+          "url_img": "/images/galleries/7/gall01.jpg"
+        },
+        {
+          "caption": "Caption 02",
+          "url_img": "/images/galleries/7/gall02.jpg"
+        },
+        {
+          "caption": "Caption 03",
+          "url_img": "/images/galleries/7/gall03.jpg"
+        },
+        {
+          "caption": "Caption 04",
+          "url_img": "/images/galleries/7/gall04.jpg"
+        },
+        {
+          "caption": "Caption 05",
+          "url_img": "/images/galleries/7/gall05.jpg"
+        },
+        {
+          "caption": "Caption 06",
+          "url_img": "/images/galleries/7/gall06.jpg"
+        },
+        {
+          "caption": "Caption 07",
+          "url_img": "/images/galleries/7/gall07.jpg"
+        },
+        {
+          "caption": "Caption 08",
+          "url_img": "/images/galleries/7/gall08.jpg"
+        },
+        {
+          "caption": "Caption 09",
+          "url_img": "/images/galleries/7/gall09.jpg"
+        }
+      ]
+    },
+    {
+      "title_gallery": "Nobel Prize Concert",
+      "category": "Events",
+      "images": [
+        {
+          "caption": "Caption 01",
+          "url_img": "/images/galleries/8/gall01.jpg"
+        },
+        {
+          "caption": "Caption 02",
+          "url_img": "/images/galleries/8/gall02.jpg"
+        },
+        {
+          "caption": "Caption 03",
+          "url_img": "/images/galleries/8/gall03.jpg"
+        },
+        {
+          "caption": "Caption 04",
+          "url_img": "/images/galleries/8/gall04.jpg"
+        },
+        {
+          "caption": "Caption 05",
+          "url_img": "/images/galleries/8/gall05.jpg"
+        },
+        {
+          "caption": "Caption 06",
+          "url_img": "/images/galleries/8/gall06.jpg"
+        },
+        {
+          "caption": "Caption 07",
+          "url_img": "/images/galleries/8/gall07.jpg"
+        },
+        {
+          "caption": "Caption 08",
+          "url_img": "/images/galleries/8/gall08.jpg"
+        },
+        {
+          "caption": "Caption 09",
+          "url_img": "/images/galleries/8/gall09.jpg"
+        }
+      ]
+    },
+    {
+      "title_gallery": "Anton Zeilinger",
+      "category": "laureates",
+      "images": [
+        {
+          "caption": "Caption 01",
+          "url_img": "/images/galleries/9/gall01.jpg"
+        },
+        {
+          "caption": "Caption 02",
+          "url_img": "/images/galleries/9/gall02.jpg"
+        },
+        {
+          "caption": "Caption 03",
+          "url_img": "/images/galleries/9/gall03.jpg"
+        },
+        {
+          "caption": "Caption 04",
+          "url_img": "/images/galleries/9/gall04.jpg"
+        },
+        {
+          "caption": "Caption 05",
+          "url_img": "/images/galleries/9/gall05.jpg"
+        },
+        {
+          "caption": "Caption 06",
+          "url_img": "/images/galleries/9/gall06.jpg"
+        },
+        {
+          "caption": "Caption 07",
+          "url_img": "/images/galleries/9/gall07.jpg"
+        },
+        {
+          "caption": "Caption 08",
+          "url_img": "/images/galleries/9/gall08.jpg"
+        },
+        {
+          "caption": "Caption 09",
+          "url_img": "/images/galleries/9/gall09.jpg"
+        }
+      ]
+    },
+    {
+      "title_gallery": "Nobel Week Lights 2021",
+      "category": "NobelWeek",
+      "images": [
+        {
+          "caption": "Caption 01",
+          "url_img": "/images/galleries/10/gall01.jpg"
+        },
+        {
+          "caption": "Caption 02",
+          "url_img": "/images/galleries/10/gall02.jpg"
+        },
+        {
+          "caption": "Caption 03",
+          "url_img": "/images/galleries/10/gall03.jpg"
+        },
+        {
+          "caption": "Caption 04",
+          "url_img": "/images/galleries/10/gall04.jpg"
+        },
+        {
+          "caption": "Caption 05",
+          "url_img": "/images/galleries/10/gall05.jpg"
+        },
+        {
+          "caption": "Caption 06",
+          "url_img": "/images/galleries/10/gall06.jpg"
+        },
+        {
+          "caption": "Caption 07",
+          "url_img": "/images/galleries/10/gall07.jpg"
+        },
+        {
+          "caption": "Caption 08",
+          "url_img": "/images/galleries/10/gall08.jpg"
+        },
+        {
+          "caption": "Caption 09",
+          "url_img": "/images/galleries/10/gall09.jpg"
+        }
+      ]
+    },
+    {
+      "title_gallery": "Presserom",
+      "category": "Events",
+      "images": [
+        {
+          "caption": "Caption 01",
+          "url_img": "/images/galleries/11/gall01.jpg"
+        },
+        {
+          "caption": "Caption 02",
+          "url_img": "/images/galleries/11/gall02.jpg"
+        },
+        {
+          "caption": "Caption 03",
+          "url_img": "/images/galleries/11/gall03.jpg"
+        },
+        {
+          "caption": "Caption 04",
+          "url_img": "/images/galleries/11/gall04.jpg"
+        },
+        {
+          "caption": "Caption 05",
+          "url_img": "/images/galleries/11/gall05.jpg"
+        },
+        {
+          "caption": "Caption 06",
+          "url_img": "/images/galleries/11/gall06.jpg"
+        },
+        {
+          "caption": "Caption 07",
+          "url_img": "/images/galleries/11/gall07.jpg"
+        },
+        {
+          "caption": "Caption 08",
+          "url_img": "/images/galleries/11/gall08.jpg"
+        },
+        {
+          "caption": "Caption 09",
+          "url_img": "/images/galleries/11/gall09.jpg"
+        }
+      ]
+    },
+    {
+      "title_gallery": "Nobel Week Lights 2020",
+      "category": "NobelWeek",
+      "images": [
+        {
+          "caption": "Caption 01",
+          "url_img": "/images/galleries/12/gall01.jpg"
+        },
+        {
+          "caption": "Caption 02",
+          "url_img": "/images/galleries/12/gall02.jpg"
+        },
+        {
+          "caption": "Caption 03",
+          "url_img": "/images/galleries/12/gall03.jpg"
+        },
+        {
+          "caption": "Caption 04",
+          "url_img": "/images/galleries/12/gall04.jpg"
+        },
+        {
+          "caption": "Caption 05",
+          "url_img": "/images/galleries/12/gall05.jpg"
+        },
+        {
+          "caption": "Caption 06",
+          "url_img": "/images/galleries/12/gall06.jpg"
+        },
+        {
+          "caption": "Caption 07",
+          "url_img": "/images/galleries/12/gall07.jpg"
+        },
+        {
+          "caption": "Caption 08",
+          "url_img": "/images/galleries/12/gall08.jpg"
+        },
+        {
+          "caption": "Caption 09",
+          "url_img": "/images/galleries/12/gall09.jpg"
+        }
+      ]
+    },
+    {
+      "title_gallery": "Arthur B. McDonald",
+      "category": "laureates",
+      "images": [
+        {
+          "caption": "Caption 01",
+          "url_img": "/images/galleries/13/gall01.jpg"
+        },
+        {
+          "caption": "Caption 02",
+          "url_img": "/images/galleries/13/gall02.jpg"
+        },
+        {
+          "caption": "Caption 03",
+          "url_img": "/images/galleries/13/gall03.jpg"
+        },
+        {
+          "caption": "Caption 04",
+          "url_img": "/images/galleries/13/gall04.jpg"
+        },
+        {
+          "caption": "Caption 05",
+          "url_img": "/images/galleries/13/gall05.jpg"
+        },
+        {
+          "caption": "Caption 06",
+          "url_img": "/images/galleries/13/gall06.jpg"
+        },
+        {
+          "caption": "Caption 07",
+          "url_img": "/images/galleries/13/gall07.jpg"
+        },
+        {
+          "caption": "Caption 08",
+          "url_img": "/images/galleries/13/gall08.jpg"
+        },
+        {
+          "caption": "Caption 09",
+          "url_img": "/images/galleries/13/gall09.jpg"
+        }
+      ]
+    }
+  ]
+}

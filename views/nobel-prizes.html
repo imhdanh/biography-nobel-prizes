@@ -1,0 +1,78 @@
+<div ng-controller="pageNobelList">
+  <div class="container-fluid bgtitle nbl">
+    <h1>Explore prizes and laureates</h1>
+  </div>
+  <div class="container g-0 py-5">
+    <div class="row">
+      <form class="p-3 nobel_select">
+        <div class="row d-flex justify-content-between">
+          <div class="col-7">
+            <select
+              name="categories"
+              id="form-categories"
+              size="4"
+              ng-model="selectedCategory"
+            >
+              <option class="col" value="" selected>All</option>
+              <option class="col" value="physics">Physics</option>
+              <option class="col" value="chemistry">Chemistry</option>
+              <option class="col" value="medicine">Medicine</option>
+            </select>
+          </div>
+          <input
+            type="number"
+            name="year"
+            id="year"
+            class="col-2"
+            placeholder="Year..."
+            min="1901"
+            max="2022"
+            ng-model="selectedYear"
+          />
+          <input
+            type="button"
+            value="Reset"
+            class="btn-search col-2"
+            ng-click="setDefaule()"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="listnobels my-4 gap-4">
+      <div
+        class="boxnobels box-content row d-flex justify-content-between m-0"
+        ng-repeat="nobel in nobellist | filter:{category:selectedCategory,year:selectedYear} | limitTo:pageSize:currentPage*pageSize"
+      >
+        <div class="col-5 nobels__img">
+          <a ng-href="#!/nobel-prizes/{{nobel.link}}"
+            ><img ng-src="{{nobel.thumburl}}" alt="{{nobel.title}}"
+          /></a>
+        </div>
+        <div class="col-7 d-flex p-3 flex-column justify-content-around">
+          <a ng-href="#!/nobel-prizes/{{nobel.link}}">
+            <h3>{{nobel.title}}</h3>
+          </a>
+          <p>{{nobel.winnerof}}</p>
+          <p>Prize motivation: {{nobel.prizemotivation}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row m-4 navpag">
+      <input
+        class="btn-pag"
+        type="button"
+        value="Previous"
+        ng-disabled="currentPage == 0"
+        ng-click="currentPage=currentPage-1"
+      />
+      {{currentPage+1}}/{{totalPages}}
+      <input
+        class="btn-pag"
+        type="button"
+        value="Next"
+        ng-disabled="currentPage == totalPages - 1"
+        ng-click="currentPage=currentPage+1"
+      />
+    </div>
+  </div>
+</div>

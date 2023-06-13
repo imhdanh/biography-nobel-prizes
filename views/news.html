@@ -1,0 +1,62 @@
+<div ng-controller="pageNews">
+    <div class="container-fluid bg-news bg-herotitle">
+        <span class="title-center">News & Events</span>
+    </div>
+    <div class="container my-3">
+        <div class="row">
+            <div class="box-content osearch p-4 my-3">
+                <div class="box-search input-focus-effect my-3">
+                    <input type="text" ng-model="titleSearch" id="search-title" placeholder=" ">
+                    <label for="search-title">Search Title</label>
+                </div>
+            </div>
+            <div class="col-9 list-news">
+                <div ng-repeat="new in news | filter:titleSearch | limitTo:pageSize:currentPage*pageSize" class="card-news box-content">
+                    <div class="card-news-img">
+                        <a href="#!/news/{{new.link}}" class="thumb">
+                            <img ng-src="{{new.thumburl}}" alt="{{new.title}}" />
+                        </a>
+                        <span class="card-datetime">{{new.datetime| date:'dd MMMM yyyy'}}</span>
+                    </div>
+                    <div class="card-content p-4">
+                        <a ng-href="#!/news/{{new.link}}">
+                            <h4 class="card-title">{{new.title}}</h4>
+                        </a>
+                        <p class="py-3">{{new.shortnews}}</p>
+                        <a ng-href="#!/news/{{new.link}}" class="btn_readmore">Read more</a>
+                    </div>
+                </div>
+                <div class="row m-4 navpag">
+                    <input class="btn-pag" type="button" value="Previous" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+                    {{currentPage+1}}/{{totalPages}}
+                    <input class="btn-pag" type="button" value="Next" ng-disabled="currentPage == totalPages - 1"
+                        ng-click="currentPage=currentPage+1">
+                </div>
+            </div>
+            <div class="col-3 sidebar">
+                <div class="box-content dsearch p-4">
+                    <div class="box-search input-focus-effect my-3">
+                        <input type="text" ng-model="titleSearch" id="search-title" placeholder=" ">
+                        <label for="search-title">Search Title</label>
+                    </div>
+                </div>
+                <div class="box-content my-5 py-3">
+                    <span class="h-line-x mx-2">Post order by date</span>
+                    <div class="sidebar_post">
+                        <div class="card-news-slider mx-2 col py-3" ng-repeat="new in news| orderBy:'-datetime' | limitTo:6">
+                            <div class="card-thumb"><img ng-src="{{new.thumburl}}" alt="{{new.title}}">
+                                <span class="card-datetime">{{new.datetime | date:'dd MMMM yyyy'}}</span>
+                                <div class="card-content">
+                                    <a ng-href="#!/news/{{new.link}}">
+                                        <h5 class="card-title">{{new.title}}</h5>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

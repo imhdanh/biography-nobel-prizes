@@ -1,0 +1,63 @@
+<div ng-controller="pageAboutUs">
+  <div class="container-fluid bgtitle">
+      <h1>{{aboutus.title}}</h1>
+  </div>
+  <div class="container content">
+      <div class="row my-5">
+          <div class="col-7">
+              <h2 class="h-line-x">{{aboutus.title_p1}}</h2>
+              <div ng-bind-html="aboutus.content_p1 | convert"></div>
+          </div>
+          <div class="col-5 d-flex flex-column justify-content-center align-items-center">
+              <img class="w-100" src="./images/rsz_banner-nobel-prizess.png" alt="">
+              <caption>Overview of the Nobel Prize</caption>
+          </div>
+      </div>
+      <div class="count-content my-5">
+          <div class="col-3 box-count d-flex flex-column justify-content-around align-items-center">
+              <i class="bi bi-calendar3"></i>
+              <span class="counter">29 June 1900</span>
+              <p>Established</p>
+          </div>
+          <div class="col-3 box-count d-flex flex-column justify-content-around align-items-center">
+              <i class="bi bi-people"></i>
+              <span class="counter">923</span>
+              <p>Laureates</p>
+          </div>
+          <div class="col-3 box-count d-flex flex-column justify-content-around align-items-center">
+              <i class="bi bi-book"></i>
+              <span class="counter">6</span>
+              <p>Prize categories</p>
+          </div>
+      </div>
+      <div class="bgcontent my-5 p-5">
+          <div class="title-content">
+              <h2>THE MAN BEHIND THE PRIZE<br>ALFRED NOBEL</h2>
+          </div>
+      </div>
+      <div class="row my-5">
+          <div class="col-4">
+              <h3 class="h-line-x">Quick facts</h3>
+              <ul>
+                  <li>Born: 21 October 1833</li>
+                  <li>Died: 10 December 1896</li>
+                  <li>Known for: inventing dynamite and holder of 355 patents</li>
+                  <li>Professions: chemist, inventor, engineer, entrepreneur, businessman, author
+                  </li>
+                  <li>Will: left 31 million SEK (about 265 million dollar today) to fund the prizes
+                  </li>
+              </ul>
+          </div>
+          <div class="col-8 d-flex flex-column justify-content-between">
+              <h3 class="h-line-x">For the greatest benefit to humankind</h3>
+              <p>Alfred Nobel was an inventor,
+                  entrepreneur, scientist and businessman who also wrote poetry and drama. His varied interests are
+                  reflected in the prize he established and which he lay the foundation for in 1895 when he wrote his
+                  last will, leaving much of his wealth to the establishment of the prize.</p>
+              <p>Since 1901, the Nobel Prize has been honoring men and women from
+                  around the world for outstanding achievements in physics, chemistry, physiology or medicine,
+                  literature and for work in peace.</p>
+          </div>
+      </div>
+  </div>
+</div>

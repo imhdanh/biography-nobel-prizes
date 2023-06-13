@@ -1,0 +1,58 @@
+<div ng-controller="newDetaile">
+  <div class="container-fluid bg-news bg-herotitle">
+    <span class="title-center">News & Events</span>
+  </div>
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-9 fullnews">
+        <div class="news-detail box-content">
+          <div class="post-thumbnail">
+            <img ng-src="{{fullnews.thumburl}}" />
+          </div>
+          <div class="post-tile p-3">
+            <h3>{{fullnews.title}}</h3>
+          </div>
+          <div class="content-post p-3">
+            <p>{{fullnews.shortnews}}</p>
+            <div ng-bind-html="fullnews.content | convert"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 sidebar">
+        <div class="box-content d-none dsearch p-4">
+          <div class="box-search input-focus-effect my-3">
+            <input
+              type="text"
+              ng-model="titleSearch"
+              id="search-title"
+              placeholder=" "
+            />
+            <label for="search-title">Search Title</label>
+          </div>
+        </div>
+        <div class="box-content relatednews py-3">
+          <span class="h-line-x mx-2">Related news</span>
+          <div class="list-related">
+            <div
+              class="card-news-slider mx-2 col py-3"
+              ng-repeat="new in detailnews | limitTo:6"
+              ng-if="new.link != fullnews.link"
+            >
+              <div class="card-thumb">
+                <img ng-src="{{new.thumburl}}" alt="{{new.title}}" />
+                <span class="card-datetime"
+                  >{{new.datetime | date:'dd MMMM yyyy'}}</span
+                >
+                <div class="card-content">
+                  <a ng-href="#!/news/{{new.link}}">
+                    <h5 class="card-title">{{new.title}}</h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

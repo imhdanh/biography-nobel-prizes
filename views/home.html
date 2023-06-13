@@ -1,0 +1,142 @@
+<div ng-controller="pageHome">
+    <section id="section-one">
+        <div class="container-fluid g-0">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"
+                        aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div ng-class="{'active': $first}" class="carousel-item" ng-repeat="data in sliders">
+                        <img ng-src="{{data.urlimage}}" class="d-block w-100" alt="{{data.alt}}">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="container g-0 boxcta bg-primary">
+            <div class="row">
+                <div class="col-9 d-flex align-items-center justify-content-center">
+                    <h2 class="text-light p-lg-4 p-md-3 p-sm-2">{{cta[0].title}}</h2>
+                </div>
+                <div class="col-3 d-flex align-items-center justify-content-center">
+                    <a ng-href="#!{{cta[0].btnurl}}"><span class="btn-cta">{{cta[0].btntext}}</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-two">
+        <div class="container g-0 my-3">
+            <div class="row py-3 my-4" ng-repeat="data in topNews" ng-class="{'row py-3 my-4 flex-row-reverse': $last}">
+                <div class="col" ng-if="data.typeMedia == 'video'">
+                    <iframe width="100%" ng-src="{{data.scrMedia | embed}}" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col" ng-if="data.typeMedia == 'photo'">
+                    <img ng-src="{{data.scrMedia}}" alt="{{data.title}}">
+                </div>
+                <div class="col px-4 d-flex flex-column justify-content-between short-news">
+                    <h3 class="title-line-y py-gl-3 py-md-1">{{data.title}}</h3>
+                    <p>{{data.shortContent}}</p>
+                    <button ng-href="{{data.urlContent}}" class="btn-rm w-25">Read more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-three" class="video-banner">
+        <div class="videobg">
+            <video playsinline autoplay muted loop>
+                <source src="./images/video-nen-background.mp4" mimetype="video/mp4">
+            </video>
+        </div>
+        <div class="container banner-ov">
+            <div class="banner-ov-bg">
+                <h2>Advancing science for the benefit of humanity</h2>
+            </div>
+        </div>
+    </section>
+    <section id="section-five">
+        <div class="container g-0 py-5" ng-controller="pageNews">
+            <h2>News & Events</h2>
+            <div class="row my-5">
+                <div class="col">
+                    <div class="card-featured box-content">
+                        <div class="card-thumb"> <a ng-href="#!/news/{{news[0].link}}"><img ng-src="{{news[0].thumburl}}" alt="{{news[0].title}}"></a>
+                            <span class="card-datetime">{{news[0].datetime | date:'dd MMMM yyyy'}}</span>
+                        </div>
+                        <div class="card-content">
+                            <a ng-href="#!/news/{{news[0].link}}">
+                                <h5 class="card-title py-3 py-md-1">{{news[0].title}}</h5>
+                            </a>
+                            <p>
+                                {{news[0].shortnews}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex flex-column justify-content-between">
+                    <div class="card-featured-col2 box-content d-flex flex-row" ng-repeat="new in news | limitTo:3:1">
+                        <div class="card-thumb col-4">
+                            <a ng-href="#!/news/{{new.link}}"><img ng-src="{{new.thumburl}}" alt="{{new.title}}"></a>
+                            <span class="card-datetime">{{new.datetime| date:'dd MMMM yyyy'}}</span>
+                        </div>
+                        <div class="card-content col-8 d-flex flex-column justify-content-between">
+                            <a ng-href="#!/news/{{new.link}}">
+                                <h5 class="card-title">{{new.title}}</h5>
+                            </a>
+                            <p>{{new.shortnews}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-0 home_snews">
+                <div class="card-news-slider" ng-repeat="new in news | limitTo:4:4">
+                    <div class="card-thumb"><img ng-src="{{new.thumburl}}" alt="{{new.title}}">
+                        <span class="card-datetime">{{new.datetime | date:'dd MMMM yyyy'}}</span>
+                        <div class="card-content">
+                            <a ng-href="#!/news/{{new.link}}">
+                                <h5 class="card-title">{{new.title}}</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-six">
+        <div class="container g-0 py-5">
+            <div class="bg-herotitle bg-home">
+                <span class="title-center">Prizes and laureates
+                </span>
+                <a class="btn_Explore" href="#!/nobel-prizes">Explore</a>
+            </div>
+        </div>
+    </section>
+    <section id="section-seven">
+        <div class="container g-0" ng-controller="pageNobelList">
+            <h3 class="py-3">You know about them?</h3>
+            <div class="randomPanel">
+                <div class="card-news randomList" ng-repeat="nobel in postRandom">
+                    <div class="card-thumb">
+                        <a ng-href="#!/nobel-prizes/{{nobel.link}}"><img ng-src="{{nobel.thumburl}}" alt="{{nobel.title}}"></a>
+                    </div>
+                    <div class="card-content d-flex flex-column justify-content-between">
+                        <a ng-href="#!/nobel-prizes/{{nobel.link}}">
+                            <h4 class="card-title">{{nobel.title}}</h4>
+                        </a>
+                        <p>{{nobel.winnerof}}</p>
+                        <p>Prize motivation: {{nobel.prizemotivation}}</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+</div>

@@ -1,0 +1,61 @@
+<div ng-controller="pageContact">
+  <div class="container-fluid bgtitle bgct">
+    <h1>Contact</h1>
+  </div>
+  <div class="container g-0 my-3">
+    <div class="row py-3 my-4">
+      <div class="col">
+        <h3 class="h-line-fx">Information</h3>
+        <p>
+          If you have any questions, you can contact the information below or
+          submit the form to contact us directly.
+        </p>
+        <span class="h-line-x">Contact Nobel Prize Outreach:</span>
+        <ul class="footer-address pt-2">
+          <li>
+            <i class="bi bi-mailbox"></i>Postal address: The Nobel Foundation
+            <br />
+            P.O. Box 5232, SE-102 45 Stockholm, Sweden
+          </li>
+          <li>
+            <i class="bi bi-geo-alt"></i>Street address: Sturegatan 14,
+            Stockholm
+          </li>
+          <li><i class="bi bi-telephone"></i>Tel: +46 (0)8 663 09 20</li>
+          <li><i class="bi bi-printer"></i>Fax: +46 (0)8 660 38 47</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="container" ng-app="ContactForm">
+          <h3 class="h-line-fx">Contact form</h3>
+          <form>
+            <div class="input-focus-effect my-3">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder=" "
+                required
+              />
+              <label for="name">Name*</label>
+            </div>
+            <div class="input-focus-effect my-3">
+              <input type="text" name="email" id="email" placeholder=" " />
+              <label for="email">Email*</label>
+            </div>
+            <div class="input-focus-effect my-3">
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Messages"
+              ></textarea>
+            </div>
+            <input type="submit" class="btn-submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
