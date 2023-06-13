@@ -12,7 +12,7 @@ Project title: Biography
 
 ## BIOGRAPHY - THE PORTAL NOBEL PRIZES
 
-![](https://biography-sem01.github.io/images/Logo-biography.png)
+![](https://imhdanh.github.io/biography-nobel-prizes/images/Logo-biography.png)
 
 ###Group members
 
@@ -22,7 +22,7 @@ Project title: Biography
 
 ============================
 
-eProject published at: https://biography-sem01.github.io/#!/
+eProject published at: https://imhdanh.github.io/biography-nobel-prizes/
 
 ============================
 
