@@ -4,7 +4,7 @@ var app = angular.module("myApp", ["ngRoute"]);
 // app.config(function ($routeProvider, $locationProvider) {
 app.config(function ($routeProvider) {
   $routeProvider
-    .when("/", { templateUrl: "./views/home.html" })
+    .when("/", { templateUrl: "/biography-nobel-prizes/views/home.html" })
     .when("/404", { templateUrl: "./views/404.html" })
     .when("/sitemap", { templateUrl: "/views/sitemap.html" })
     .when("/news", { templateUrl: "/views/news.html", controller: "pageNews" })
