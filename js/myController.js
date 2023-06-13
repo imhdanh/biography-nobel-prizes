@@ -4,32 +4,32 @@ var app = angular.module("myApp", ["ngRoute"]);
 // app.config(function ($routeProvider, $locationProvider) {
 app.config(function ($routeProvider) {
   $routeProvider
-    .when("/", { templateUrl: "/views/home.html" })
-    .when("/404", { templateUrl: "./views/404.html" })
-    .when("/sitemap", { templateUrl: "/views/sitemap.html" })
-    .when("/news", { templateUrl: "/views/news.html", controller: "pageNews" })
+    .when("/", { templateUrl: "views/home.html" })
+    .when("/404", { templateUrl: "views/404.html" })
+    .when("/sitemap", { templateUrl: "views/sitemap.html" })
+    .when("/news", { templateUrl: "views/news.html", controller: "pageNews" })
     .when("/news/:newsId", {
-      templateUrl: "./views/news-detail.html",
+      templateUrl: "views/news-detail.html",
       controller: "newDetaile",
     })
     .when("/nobel-prizes", {
-      templateUrl: "/views/nobel-prizes.html",
+      templateUrl: "views/nobel-prizes.html",
       controller: "pageNobelList",
     })
     .when("/nobel-prizes/:bioId", {
-      templateUrl: "./views/detail-bio.html",
+      templateUrl: "views/detail-bio.html",
       controller: "bioDetaile",
     })
     .when("/about-us", {
-      templateUrl: "/views/about-us.html",
+      templateUrl: "views/about-us.html",
       controller: "pageAboutUs",
     })
     .when("/contact", {
-      templateUrl: "/views/contact.html",
+      templateUrl: "views/contact.html",
       controller: "pageContact",
     })
     .when("/gallery", {
-      templateUrl: "/views/gallery.html",
+      templateUrl: "views/gallery.html",
       controller: "pageGallery",
     })
     .otherwise({ redirectTo: "/404" });
